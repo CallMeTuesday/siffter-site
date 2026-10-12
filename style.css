@@ -119,6 +119,9 @@ h2 .dim { color: var(--dim); }
 @media (min-width: 960px) {
   .split, .trust .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(32px, 4vw, 64px); }
   .trust img { max-width: none; }
+  /* "All your music" mirrors the others: the window on the left, the copy on the right. */
+  .split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .split > img { order: -1; }
   .trust-head { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 24px; }
   .trust h2, .trust-copy { flex: none; }
 }
