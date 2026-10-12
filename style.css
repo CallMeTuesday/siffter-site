@@ -97,22 +97,28 @@ h2 .dim { color: var(--dim); }
 .key-card p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
 .is-reject { color: var(--reject); }
 .is-keep { color: var(--accent); }
-.split { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 5vw, 64px); }
-.split > div { flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; }
-.split > img { flex: 1 1 520px; min-width: 0; filter: drop-shadow(0 30px 50px rgba(0,0,0,.65)); }
+.split { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 64px); }
+.split > div { display: flex; flex-direction: column; gap: 16px; container-type: inline-size; }
+.split > img { width: 100%; min-width: 0; filter: drop-shadow(0 30px 50px rgba(0,0,0,.65)); }
+/* Each line stays on one row: "All your music," is 8.87em wide, so the heading is sized to its column. */
+.split h2 { white-space: nowrap; font-size: clamp(26px, 11.1cqi, 52px); }
 
 /* Trust */
 .trust { background: var(--accent); color: var(--ink); }
 .trust .wrap { display: flex; flex-direction: column; gap: clamp(40px, 6vw, 72px); }
-.trust-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; }
-.trust h2 { flex: 1 1 480px; font-size: clamp(34px, 5vw, 60px); letter-spacing: -.04em; line-height: .92; }
+.trust-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; container-type: inline-size; }
+/* "gets deleted." is 7.96em wide; the heading is sized to its column so neither line wraps. */
+.trust h2 { flex: 1 1 480px; white-space: nowrap; font-size: clamp(26px, 12.4cqi, 60px); letter-spacing: -.04em; line-height: .92; }
 .trust-copy { flex: 0 1 380px; display: flex; flex-direction: column; gap: 18px; }
 .trust-copy p { margin: 0; font-size: 18px; line-height: 1.5; }
 .trust-copy .btn { align-self: flex-start; }
 .trust img { width: 100%; max-width: 900px; margin: 0 auto; filter: drop-shadow(0 40px 60px rgba(14,10,24,.45)); }
 /* From 960px the trust section matches the hero: copy on the left, the window on the right. */
+/* From 960px the hero, "All your music" and the trust section share one grid: copy in the left
+   5/12, the window filling the right 7/12, so all three windows are the same width. */
 @media (min-width: 960px) {
-  .trust .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(32px, 4vw, 64px); }
+  .split, .trust .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(32px, 4vw, 64px); }
+  .trust img { max-width: none; }
   .trust-head { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 24px; }
   .trust h2, .trust-copy { flex: none; }
 }
