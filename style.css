@@ -52,19 +52,22 @@ a { color: inherit; }
 .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: var(--accent); }
 .caption { color: var(--muted); font-size: 16px; line-height: 1.5; max-width: 560px; }
 .hero-copy { position: relative; width: 100%; max-width: 900px; margin-top: 16px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; }
-.hero-copy > div:first-child { flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px; }
+.hero-copy > div:first-child { flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px; container-type: inline-size; }
 h1 { margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(34px, 5.4vw, 60px); line-height: .95; letter-spacing: -.035em; }
+/* Each line of the hero headline stays on one row: "Keep what hits." is 9.52em wide, so it is sized to its column. */
+.hero-copy h1 { white-space: nowrap; font-size: clamp(26px, 10.4cqi, 60px); }
 .accent { color: var(--accent); }
 .lede { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.5; max-width: 460px; }
-.cta-col { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.cta-col { display: flex; flex-direction: column; gap: 8px; align-items: center; }
 .btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: var(--text); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 16px; }
 .btn--dark { background: var(--ink); color: var(--text); }
-.req { font-family: var(--mono); font-size: 11px; color: var(--faint); padding-left: 6px; }
+.req { font-family: var(--mono); font-size: 11px; color: var(--faint); }
 
 /* Ticker */
 .ticker { border-block: 1px solid #241d38; padding: 14px 0; overflow: hidden; font-family: var(--mono); font-size: 13px; letter-spacing: .06em; color: var(--faint); }
-.ticker-track { display: flex; width: max-content; animation: tick 40s linear infinite; }
-.ticker-track span { white-space: pre; padding-right: 1.5em; }
+/* Each half holds the phrase four times (about 3,800px), so the loop never shows an end, even on an ultrawide screen. */
+.ticker-track { display: flex; width: max-content; animation: tick 160s linear infinite; }
+.ticker-track span { white-space: pre; }
 .ticker b { color: var(--accent); font-weight: 400; }
 @keyframes tick { to { transform: translateX(-50%); } }
 
