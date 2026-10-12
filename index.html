@@ -12,81 +12,171 @@
   <meta property="og:description" content="Keep the tracks you love. Clear out the rest.">
   <meta property="og:image" content="https://syfter.app/images/social.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#1b1430">
+  <meta name="theme-color" content="#0e0a18">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="preload" as="image" href="images/apple-music.webp" type="image/webp">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/">Syfter</a>
-      <nav>
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
-      </nav>
-    </div>
+
+<section class="hero" id="top">
+  <div class="hero-word" aria-hidden="true">SYFTER</div>
+
+  <header class="site-header wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0e0a18" stroke-width="2.2" stroke-linecap="round"><path d="M3 5h10M5 8h6M7 11h2"/></svg>
+      </span>
+      syfter
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="/support/">Support</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <h1>Syfter</h1>
-        <p class="tagline">Keep the tracks you love.<br>Clear out the rest.</p>
-        <p class="sub">For Apple Music, any folder of music, and your samples.</p>
-        <!-- Replace with Apple's official Mac App Store badge once the app has a store link. -->
-        <a class="store-button" aria-disabled="true">Coming soon to the Mac App Store</a>
-        <p class="requirements">Requires macOS 14 or later.</p>
+  <div class="tabs" role="tablist" aria-label="What Syfter sorts">
+    <button class="tab" role="tab" id="tab-am" aria-controls="showcase" aria-selected="true" data-index="0">Apple Music</button>
+    <button class="tab" role="tab" id="tab-folder" aria-controls="showcase" aria-selected="false" tabindex="-1" data-index="1">Any folder</button>
+    <button class="tab" role="tab" id="tab-samples" aria-controls="showcase" aria-selected="false" tabindex="-1" data-index="2">Samples</button>
+  </div>
+
+  <div class="showcase" id="showcase" role="tabpanel" aria-labelledby="tab-am" tabindex="0">
+    <div class="showcase-glow" aria-hidden="true"></div>
+    <div class="showcase-stage">
+      <img class="shot" src="images/apple-music.webp" width="1626" height="1292" alt="Syfter reviewing Night Bus Home by Harbor Lights from Apple Music, with Reject and Keep on either side">
+      <img class="shot" src="images/folder.webp" width="1626" height="1292" loading="lazy" hidden alt="Syfter reviewing Midnight Rollers by Cold Harbour Sound from a music folder">
+      <img class="shot" src="images/samples.webp" width="1626" height="1292" loading="lazy" hidden alt="Syfter reviewing a Half Time Break 85 BPM sample">
+    </div>
+    <div class="showcase-caption" aria-live="off">
+      <span class="kicker" data-kicker>FOR LISTENERS</span>
+      <span class="caption" data-caption>Hear each track, then keep it or reject it. Nothing changes in Apple Music until you approve.</span>
+    </div>
+  </div>
+
+  <div class="hero-copy">
+    <div>
+      <h1>Keep what hits.<br><span class="accent">Bin the rest.</span></h1>
+      <p class="lede">A Mac app for sorting your music and samples. Listen to each file, then swipe right to keep it or left to move it out.</p>
+    </div>
+    <div class="cta-col">
+      <a class="btn" href="#notify">
+        <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true"><path d="M13.2 9.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8C3.7 4.4 2.2 5.3 1.4 6.8c-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3.1-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.5-1-2.8-4.2zM10.9 2.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg>
+        Coming soon to the Mac App Store
+      </a>
+      <span class="req">macOS 14 or later</span>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>APPLE MUSIC  <b>◆</b>  ANY FOLDER  <b>◆</b>  BREAKS  <b>◆</b>  LOOPS  <b>◆</b>  ONE-SHOTS  <b>◆</b>  NOTHING GETS DELETED  <b>◆</b>  ⌘Z PUTS IT BACK  <b>◆</b></span>
+    <span>APPLE MUSIC  <b>◆</b>  ANY FOLDER  <b>◆</b>  BREAKS  <b>◆</b>  LOOPS  <b>◆</b>  ONE-SHOTS  <b>◆</b>  NOTHING GETS DELETED  <b>◆</b>  ⌘Z PUTS IT BACK  <b>◆</b></span>
+  </div>
+</div>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <h2>Three keys.<br><span class="dim">That's the whole app.</span></h2>
+    <div class="keys">
+      <div class="key-card">
+        <div class="keycap is-reject" aria-hidden="true">←</div>
+        <div class="key-title is-reject">Reject</div>
+        <p>Swipe left or press the left arrow. The file moves to a folder you choose. Nothing is deleted.</p>
       </div>
-    </section>
-
-    <div class="wrap features">
-      <section class="decisions" aria-label="How it works">
-        <div class="decision reject">
-          <strong>Reject</strong>
-          <p>Swipe left or press the left arrow. The file moves to a folder you choose. Nothing is deleted.</p>
-        </div>
-        <div class="decision keep">
-          <strong>Keep</strong>
-          <p>Swipe right or press the right arrow. The file stays where it is, unless you choose a folder for kept files.</p>
-        </div>
-      </section>
-
-      <section class="feature">
-        <h2>Your Apple Music library</h2>
-        <p>Review the songs downloaded to your Mac. Nothing changes in Apple Music until you approve the removals.</p>
-        <img src="/images/apple-music.webp" width="1400" height="1109" loading="lazy"
-             alt="Syfter reviewing a song from Apple Music, with Reject and Keep on either side of the card.">
-      </section>
-
-      <section class="feature">
-        <h2>Any folder of music</h2>
-        <p>Point Syfter at one or more folders. Each song starts partway in, so you hear the part that matters.</p>
-        <img src="/images/folder.webp" width="1400" height="1109" loading="lazy"
-             alt="Syfter reviewing a song from a music folder.">
-      </section>
-
-      <section class="feature">
-        <h2>Your samples, too</h2>
-        <p>Breaks, loops and one-shots. Anything under a minute plays from the start.</p>
-        <img src="/images/samples.webp" width="1400" height="1109" loading="lazy"
-             alt="Syfter reviewing a drum break from a sample folder.">
-      </section>
-
-      <section class="feature">
-        <h2>Undo anything</h2>
-        <p>Press <kbd>⌘</kbd> <kbd>Z</kbd> to put the last file back exactly where it was. Your progress is saved after every decision.</p>
-      </section>
+      <div class="key-card">
+        <div class="keycap keycap--wide" aria-hidden="true">⌘ Z</div>
+        <div class="key-title">Undo</div>
+        <p>Puts the last file back exactly where it was. Your progress saves after every decision.</p>
+      </div>
+      <div class="key-card">
+        <div class="keycap is-keep" aria-hidden="true">→</div>
+        <div class="key-title is-keep">Keep</div>
+        <p>Swipe right or press the right arrow. The file stays where it is, unless you choose a folder for kept files.</p>
+      </div>
     </div>
-  </main>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <nav>
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
-      </nav>
-      <p>© 2026 TCTCTC LLC. Apple Music and Mac are trademarks of Apple Inc.</p>
+<section class="section section--tight-top">
+  <div class="wrap split">
+    <div>
+      <h2>All your music,<br><span class="dim">one review.</span></h2>
+      <p class="lede">Apple Music, music folders and sample folders, side by side. MP3, AAC, FLAC, WAV and AIFF, wherever you keep them.</p>
     </div>
-  </footer>
+    <img src="images/choose-music.webp" width="1626" height="1292" loading="lazy" alt="Syfter's Choose your music screen, with Apple Music, a Records folder and a Samples folder selected">
+  </div>
+</section>
+
+<section class="section trust" id="notify">
+  <div class="wrap">
+    <div class="trust-head">
+      <h2>Nothing<br>gets deleted.</h2>
+      <div class="trust-copy">
+        <p>Rejects wait in a folder you pick. Nothing leaves Apple Music until you approve, and ⌘Z puts anything back exactly where it was.</p>
+        <a class="btn btn--dark" href="#top">Coming soon to the Mac App Store</a>
+      </div>
+    </div>
+    <img src="images/approve.webp" width="1626" height="1292" loading="lazy" alt="Syfter's approval sheet listing rejected tracks awaiting approval before removal from Apple Music">
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 TCTCTC LLC. Apple Music and Mac are trademarks of Apple Inc.</span>
+    <nav aria-label="Legal">
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const SLIDES = [
+    { kicker: 'FOR LISTENERS', caption: 'Hear each track, then keep it or reject it. Nothing changes in Apple Music until you approve.' },
+    { kicker: 'FOR DJS', caption: 'Point it at one or more folders. Each song starts partway in, so you hear the part that matters.' },
+    { kicker: 'FOR PRODUCERS', caption: 'Breaks, loops and one-shots, from any folder. Anything under a minute plays from the start.' }
+  ];
+  const tabs = [...document.querySelectorAll('.tab')];
+  const imgs = [...document.querySelectorAll('.showcase-stage img')];
+  const panel = document.getElementById('showcase');
+  const live = panel.querySelector('.showcase-caption');
+  const kicker = document.querySelector('[data-kicker]');
+  const caption = document.querySelector('[data-caption]');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current = 0, timer = null;
+
+  function show(i, focus) {
+    current = (i + SLIDES.length) % SLIDES.length;
+    tabs.forEach((t, n) => {
+      const on = n === current;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      if (on && focus) t.focus();
+    });
+    panel.setAttribute('aria-labelledby', tabs[current].id);
+    imgs.forEach((img, n) => { img.hidden = n !== current; });
+    kicker.textContent = SLIDES[current].kicker;
+    caption.textContent = SLIDES[current].caption;
+  }
+  // Auto-advance stops for good on the first interaction. Only changes the visitor makes are
+  // announced, so a screen reader is not read a new caption every five seconds.
+  function stop() { clearInterval(timer); timer = null; live.setAttribute('aria-live', 'polite'); }
+
+  tabs.forEach((t, n) => t.addEventListener('click', () => { stop(); show(n); }));
+  document.querySelector('.tabs').addEventListener('keydown', (e) => {
+    const to = { ArrowRight: current + 1, ArrowLeft: current - 1, Home: 0, End: SLIDES.length - 1 }[e.key];
+    if (to === undefined) return;
+    stop(); show(to, true); e.preventDefault();
+  });
+  if (!reduced) timer = setInterval(() => show(current + 1), 5000);
+})();
+</script>
 </body>
 </html>
