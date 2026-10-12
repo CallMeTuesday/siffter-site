@@ -99,7 +99,8 @@ h2 .dim { color: var(--dim); }
 .is-keep { color: var(--accent); }
 .split { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 64px); }
 .split > div { display: flex; flex-direction: column; gap: 16px; container-type: inline-size; }
-.split > img { width: 100%; min-width: 0; filter: drop-shadow(0 30px 50px rgba(0,0,0,.65)); }
+/* Phones show the window first, then the copy. */
+.split > img { order: -1; width: 100%; min-width: 0; filter: drop-shadow(0 30px 50px rgba(0,0,0,.65)); }
 /* Each line stays on one row: "All your music," is 8.87em wide, so the heading is sized to its column. */
 .split h2 { white-space: nowrap; font-size: clamp(26px, 11.1cqi, 52px); }
 
@@ -112,16 +113,15 @@ h2 .dim { color: var(--dim); }
 .trust-copy { flex: 0 1 380px; display: flex; flex-direction: column; gap: 18px; }
 .trust-copy p { margin: 0; font-size: 18px; line-height: 1.5; }
 .trust-copy .btn { align-self: flex-start; }
-.trust img { width: 100%; max-width: 900px; margin: 0 auto; filter: drop-shadow(0 40px 60px rgba(14,10,24,.45)); }
+.trust img { order: -1; width: 100%; max-width: 900px; margin: 0 auto; filter: drop-shadow(0 40px 60px rgba(14,10,24,.45)); }
 /* From 960px the trust section matches the hero: copy on the left, the window on the right. */
 /* From 960px the hero, "All your music" and the trust section share one grid: copy in the left
    5/12, the window filling the right 7/12, so all three windows are the same width. */
 @media (min-width: 960px) {
   .split, .trust .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(32px, 4vw, 64px); }
-  .trust img { max-width: none; }
+  .trust img { order: 0; max-width: none; }
   /* "All your music" mirrors the others: the window on the left, the copy on the right. */
   .split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
-  .split > img { order: -1; }
   .trust-head { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 24px; }
   .trust h2, .trust-copy { flex: none; }
 }
