@@ -105,11 +105,17 @@ h2 .dim { color: var(--dim); }
 .trust { background: var(--accent); color: var(--ink); }
 .trust .wrap { display: flex; flex-direction: column; gap: clamp(40px, 6vw, 72px); }
 .trust-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; }
-.trust h2 { flex: 1 1 480px; font-size: clamp(44px, 8vw, 110px); letter-spacing: -.045em; line-height: .88; }
+.trust h2 { flex: 1 1 480px; font-size: clamp(34px, 5vw, 60px); letter-spacing: -.04em; line-height: .92; }
 .trust-copy { flex: 0 1 380px; display: flex; flex-direction: column; gap: 18px; }
 .trust-copy p { margin: 0; font-size: 18px; line-height: 1.5; }
 .trust-copy .btn { align-self: flex-start; }
 .trust img { width: 100%; max-width: 900px; margin: 0 auto; filter: drop-shadow(0 40px 60px rgba(14,10,24,.45)); }
+/* From 960px the trust section matches the hero: copy on the left, the window on the right. */
+@media (min-width: 960px) {
+  .trust .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(32px, 4vw, 64px); }
+  .trust-head { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 24px; }
+  .trust h2, .trust-copy { flex: none; }
+}
 
 /* Footer */
 .site-footer { padding: 28px var(--gutter); }
