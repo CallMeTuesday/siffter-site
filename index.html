@@ -38,36 +38,40 @@
     </nav>
   </header>
 
-  <div class="tabs" role="tablist" aria-label="What Syfter sorts">
-    <button class="tab" role="tab" id="tab-am" aria-controls="showcase" aria-selected="true" data-index="0">Apple Music</button>
-    <button class="tab" role="tab" id="tab-folder" aria-controls="showcase" aria-selected="false" tabindex="-1" data-index="1">Any folder</button>
-    <button class="tab" role="tab" id="tab-samples" aria-controls="showcase" aria-selected="false" tabindex="-1" data-index="2">Samples</button>
-  </div>
+  <div class="hero-main">
+    <div class="hero-copy">
+      <div>
+        <h1>Keep what hits.<br><span class="accent">Bin the rest.</span></h1>
+        <p class="lede">A Mac app for sorting your music and samples. Listen to each file, then swipe right to keep it or left to move it out.</p>
+      </div>
+      <div class="cta-col">
+        <a class="btn" href="#notify">
+          <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true"><path d="M13.2 9.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8C3.7 4.4 2.2 5.3 1.4 6.8c-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3.1-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.5-1-2.8-4.2zM10.9 2.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg>
+          Coming soon to the Mac App Store
+        </a>
+        <span class="req">macOS 14 or later</span>
+      </div>
+    </div>
 
-  <div class="showcase" id="showcase" role="tabpanel" aria-labelledby="tab-am" tabindex="0">
-    <div class="showcase-glow" aria-hidden="true"></div>
-    <div class="showcase-stage">
-      <img class="shot" src="images/apple-music.webp" width="1626" height="1292" alt="Syfter reviewing Night Bus Home by Harbor Lights from Apple Music, with Reject and Keep on either side">
-      <img class="shot" src="images/folder.webp" width="1626" height="1292" loading="lazy" hidden alt="Syfter reviewing Midnight Rollers by Cold Harbour Sound from a music folder">
-      <img class="shot" src="images/samples.webp" width="1626" height="1292" loading="lazy" hidden alt="Syfter reviewing a Half Time Break 85 BPM sample">
-    </div>
-    <div class="showcase-caption" aria-live="off">
-      <span class="kicker" data-kicker>FOR LISTENERS</span>
-      <span class="caption" data-caption>Hear each track, then keep it or reject it. Nothing changes in Apple Music until you approve.</span>
-    </div>
-  </div>
+    <div class="hero-media">
+      <div class="tabs" role="tablist" aria-label="What Syfter sorts">
+        <button class="tab" role="tab" id="tab-am" aria-controls="showcase" aria-selected="true" data-index="0">Apple Music</button>
+        <button class="tab" role="tab" id="tab-folder" aria-controls="showcase" aria-selected="false" tabindex="-1" data-index="1">Any folder</button>
+        <button class="tab" role="tab" id="tab-samples" aria-controls="showcase" aria-selected="false" tabindex="-1" data-index="2">Samples</button>
+      </div>
 
-  <div class="hero-copy">
-    <div>
-      <h1>Keep what hits.<br><span class="accent">Bin the rest.</span></h1>
-      <p class="lede">A Mac app for sorting your music and samples. Listen to each file, then swipe right to keep it or left to move it out.</p>
-    </div>
-    <div class="cta-col">
-      <a class="btn" href="#notify">
-        <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true"><path d="M13.2 9.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8C3.7 4.4 2.2 5.3 1.4 6.8c-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.7 2.4 3 2.4 1.2 0 1.6-.8 3.1-.8s1.8.8 3.1.8c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.5-1-2.8-4.2zM10.9 2.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg>
-        Coming soon to the Mac App Store
-      </a>
-      <span class="req">macOS 14 or later</span>
+      <div class="showcase" id="showcase" role="tabpanel" aria-labelledby="tab-am" tabindex="0">
+        <div class="showcase-glow" aria-hidden="true"></div>
+        <div class="showcase-stage">
+          <img class="shot" src="images/apple-music.webp" width="1626" height="1292" alt="Syfter reviewing Night Bus Home by Harbor Lights from Apple Music, with Reject and Keep on either side">
+          <img class="shot" src="images/folder.webp" width="1626" height="1292" loading="lazy" hidden alt="Syfter reviewing Midnight Rollers by Cold Harbour Sound from a music folder">
+          <img class="shot" src="images/samples.webp" width="1626" height="1292" loading="lazy" hidden alt="Syfter reviewing a Half Time Break 85 BPM sample">
+        </div>
+        <div class="showcase-caption" aria-live="off">
+          <span class="kicker" data-kicker>FOR LISTENERS</span>
+          <span class="caption" data-caption>Hear each track, then keep it or reject it. Nothing changes in Apple Music until you approve.</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
